@@ -1,0 +1,22 @@
+
+  .card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .video-container {
+    max-width: 800px;
+    margin-left: 420px;
+    margin-top: 20px;
+  }
+
+  .section2{
+    padding-bottom: 40px;
+  }
+
+
+
+

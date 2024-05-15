@@ -1,0 +1,23 @@
+body {
+    padding: 30px;
+  }
+
+.container16{
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .container16 img {
+    float: right;
+  }
+
+.container17 {
+  display: flex;
+  align-items: center;
+}
+
+.container17 img {
+  margin-left: 20px; /* Чтобы создать отступ между текстом и изображением */
+  float: left;
+}
+

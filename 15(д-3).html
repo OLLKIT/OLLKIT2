@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Стажировка-аудиотека</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style15(d).css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+     <!--Заголовок с меню-->
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container-fluid">
+         <ul class="navbar-nav">
+           <a class="navbar-brand" href="#">Аудиотека</a>
+         <li class="nav-item">
+           <a class="nav-link" href="file:///C:/Users/user/Desktop/%D0%A1%D1%82%D0%B0%D0%B6%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0/15.html">Главное</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="file:///C:/Users/user/Desktop/%D0%A1%D1%82%D0%B0%D0%B6%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0/16.html">Исполнители</a>
+         </li>
+         </ul>
+      </div>
+      </nav>
+
+      <!--Внутренняя часть 1 отсека-->
+    <div class="container" class="container-fluid bg-white text-blak" style="padding:50px 20px;">
+      <div class="row">
+        <div class="col-sm-6">
+  <div id="app">
+    <h2>Nikitata</h2>
+    <p>сингл</p>
+    <div>
+      <label for="trackName">Наименование трека:</label>
+      <input type="text" v-model="newTrack.name" placeholder="Наименование трека"><br></br>
+      <label for="trackName">Длительность (в минутах):</label>
+      <input type="number" v-model="newTrack.duration" placeholder="Длительность (в минутах)" min="1" max="10"> <br></br>
+      <label for="trackName">Выберите жанр</label>
+      <select v-model="newTrack.genre">
+        <option value="" disabled selected hidden>Выберите жанр</option>
+        <option value="rock">Рок</option>
+        <option value="pop">Поп</option>
+        <option value="hip-hop">Хип-хоп</option>
+      </select> <br></br>
+      <button @click="addTrack">Добавить трек</button> <br>
+    </div>
+  </br>
+    <ul>
+      <li v-for="(track, index) in tracks" :key="index">
+        {{ track.name }} - {{ track.duration }} мин. ({{ track.genre }})
+        <button @click="deleteTrack(index)">Удалить</button>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="15(д-3).js"></script>
+  </div>
+  <div class="col-lg-6 d-none d-sm-block">
+    <img src="https://sun9-66.userapi.com/impg/HizxTWmY7WkHJxcf_lB6MO6DbXtHtx6fM7L48Q/N7vAK3uZ3xs.jpg?size=2560x2560&quality=95&sign=890504689b2520b9cf5b4e826f9f9141&type=album" width="100%"
+            height="90%" >
+    </div>
+  </div> 
+  </body>
+  </html>
